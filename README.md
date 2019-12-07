@@ -9,6 +9,8 @@ you can easily put the phone!
 commands:
 git clone https://github.com/Nikait/ni_bomber
 cd ni_bomber
+pip install requests
+pip install requests[socks]
 python ni_bomber.py
 
 Relax! 
