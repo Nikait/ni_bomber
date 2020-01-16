@@ -6,6 +6,9 @@ of your internet.
 If you use this bomber at the same time by several people, 
 you can easily put the phone!
 
+upd:
+Действует только по русским номерам
+
 commands:
 git clone https://github.com/Nikait/ni_bomber
 
