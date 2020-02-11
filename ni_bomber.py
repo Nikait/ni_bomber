@@ -9,7 +9,7 @@ class color:
 	UNDERLINE = '\033[4m'
 	END = '\033[0m'
 
-print(color.Green + color.BOLD + '     ' + color.UNDERLINE + '[NI BOMBER 2.1]' + color.END)
+print(color.Green + color.BOLD + '     ' + color.UNDERLINE + '[NI BOMBER 2.0]' + color.END)
 print(color.Cyan + color.BOLD + "-"*25 + color.END)
 print(color.Cyan + color.BOLD + '| coded by  | nikait    |\n' + '| telegram: | @aaanikit |' + color.END)
 print(color.Cyan + color.BOLD + "-"*25 + color.END)
@@ -29,16 +29,12 @@ def check_number(number):
 		quit()
 check_number(number)
 
-print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + '...')
-
-proxies = {
-    'http': 'socks5://139.59.53.105:1080',
-    'https': 'socks5://139.59.53.105:1080'
-}
-
-tor = requests.get('http://icanhazip.com/', proxies=proxies).text
-tor = (tor.replace('\n',''))
-
-print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + ' - ' +  color.Green + color.BOLD + 'OK ваше очко в безопасности' + color.END)
+is_tor = input("нужен tor y/n ? ")
+if str(is_tor) == "y":
+	print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + '...')
+	proxies = {'http': 'socks5://139.59.53.105:1080','https': 'socks5://139.59.53.105:1080'}
+	tor = requests.get('http://icanhazip.com/', proxies=proxies).text
+	tor = (tor.replace('\n',''))
+	print('[*]запуск ' + color.Cyan + color.BOLD + 'Tor' + color.END + ' - ' +  color.Green + color.BOLD + 'OK ваше очко в безопасности' + color.END)
 
 services.attack(number, sms)
