@@ -22,7 +22,7 @@ print('сколько sms отправить?')
 sms = int(input(color.Green + color.BOLD + '>> ' + color.END))
 
 def check_number(number):
-	if int(len(number)) == 10 and int(number[1]) == 9:
+	if int(len(number)) == 10 and int(number[0]) == 9:
 		print('[*]check number -' + color.Green + color.BOLD + ' OK' + color.END)
 	else:
 		print('[*]check number -' + color.Green + color.BOLD + ' неправильный номер' + color.END)
