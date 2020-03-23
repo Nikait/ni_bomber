@@ -7,9 +7,7 @@ If you use this bomber at the same time by several people,
 you can easily put the phone!
 
 
-<p>
-  <img src="https://i.ibb.co/L91qg0m/IMG-20200323-230959.png">
-</p>
+<img src="https://i.ibb.co/L91qg0m/IMG-20200323-230959.png">
 
 upd:
 Действует только по русским номерам
