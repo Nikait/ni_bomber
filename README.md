@@ -1,5 +1,5 @@
 # ni_bomber
-Hi!
+<b>Hi!</b>
 This is a small sms bomber,
 the number of sms sent per second depends on the speed
 of your internet.  
@@ -8,6 +8,7 @@ you can easily put the phone!
 
 <p align="center">
   <img src="https://i.ibb.co/rwkWQmJ/Screenshot-20200323-224829.jpg">
+
 </p>
 
 upd:
