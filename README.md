@@ -6,6 +6,11 @@ of your internet.
 If you use this bomber at the same time by several people, 
 you can easily put the phone!
 
+
+<p align="center">
+  <img src="https://i.ibb.co/L91qg0m/IMG-20200323-230959.png">
+</p>
+
 upd:
 Действует только по русским номерам
 
