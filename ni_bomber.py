@@ -35,7 +35,7 @@ is_tor = input(color.BOLD + color.Green + ">> " + color.END)
 
 
 def check_number(number):
-	if int(len(number)) == 10 and int(number[0]) == 9:
+	if int(len(number)) == 10:
 		print('[*]check number -' + color.Green + color.BOLD + ' OK' + color.END)
 	else:
 		print('[*]check number -' + color.Red + color.BOLD + ' failed number!' + color.END)
