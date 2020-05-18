@@ -3,52 +3,59 @@ import datetime
 import services
 
 #colours
-class color:
-	Green = '\033[92m'
-	Cyan = '\033[95m'
-	BOLD = '\033[1m'
-	UNDERLINE = '\033[4m'
-	END = '\033[0m'
-	Red = '\033[91m'
+green     = '\033[92m'
+cyan      = '\033[95m'
+bold      = '\033[1m'
+underline = '\033[4m'
+end       = '\033[0m'
+red       = '\033[91m'
 
 #header
-print(color.Green + color.BOLD + '         ' + color.UNDERLINE + '[NI BOMBER 2.3]' + color.END)
+print(f"{green}{bold}\t\t{underline}[NI BOMBER 2.4]{end}")
 
 print()
-print(color.BOLD + "coded by" + color.END, end = "")
-print(color.Green + color.BOLD + " >> " + color.END, end = "")
-print(color.Cyan + color.BOLD + "nikait" + color.END)
+print(f"{bold}coded by{end}", end="")
+print(f"{green}{bold} >> {end}", end = "")
+print(f"{cyan}{bold}nikait{end}")
 
-print(color.BOLD +  "telegram" + color.END, end = "")
-print(color.Green + color.BOLD + " >> " + color.END, end = "")
-print(color.Cyan + color.BOLD + "@aaanikit" + color.END)
+print(f"{bold}telegram{end}", end = "")
+print(f"{green}{bold} >> {end}", end = "")
+print(f"{cyan}{bold}@aaanikit{end}")
 print()
 
 #inputs
-print('enter the number without prefixes\nexample: 9018017010')
-number = input(color.Green + color.BOLD + '>> ' + color.END)
+print('enter the number without or with prefixes (+7) (8)\nexample: 9018017010')
+input_number = input(green + bold + '>> ' + end)
 print('how many sms to send?')
-sms = int(input(color.Green + color.BOLD + '>> ' + color.END))
+sms = int(input(green + bold + '>> ' + end))
 
-print("you need a" + color.Cyan + " tor " + color.END + "y/n? ")
-is_tor = input(color.BOLD + color.Green + ">> " + color.END)
+print(f"you need a{cyan} tor {end}y/n? ")
+is_tor = input(bold + green + ">> " + end)
 
 
-def check_number(number):
-	if int(len(number)) == 10:
-		print('[*]check number -' + color.Green + color.BOLD + ' OK' + color.END)
+def parse_number(number):
+	msg = f"[*]check number - {green}{bold}OK{end}"
+	if int(len(number)) in (10, 11, 12):
+		if number[0] == "8":
+			number = number[1:]
+			print(msg)
+		elif number[:2] == "+7":
+			number = number[2:]
+			print(msg)
+		elif int(len(number)) == 10 and number[0] == 9:
+			print(msg)
 	else:
-		print('[*]check number -' + color.Red + color.BOLD + ' failed number!' + color.END)
+		print(f"[*]check number - {red}{bold}failed number!{end}\nThis bomber is intended only for Russia and if the number you entered belongs to another country then alas this bomber is not suitable for you!")
 		quit()
-check_number(number)
-
+	return number
+number = parse_number(input_number)
 
 #tor
 if str(is_tor) == "y":
-        print('[*]launch ' + color.Cyan + color.BOLD + 'Tor' + color.END + '...')
+        print(f"[*]launch {cyan}{bold}Tor{end}...")
         proxies = {'http': 'socks5://139.59.53.105:1080','https': 'socks5://139.59.53.105:1080'}
         tor = requests.get('http://icanhazip.com/', proxies=proxies).text
         tor = (tor.replace('\n',''))
-        print('[*]launch ' + color.Cyan + color.BOLD + 'Tor' + color.END + ' - ' +  color.Green + color.BOLD + 'OK' + color.END)
+        print(f"[*]launch {cyan}{bold}Tor{end} - {green}{bold}OK{end}")
 
 services.attack(number, sms)
