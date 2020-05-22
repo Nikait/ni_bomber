@@ -22,3 +22,9 @@ pip install requests[socks]
 python ni_bomber.py
 
 Relax! 
+
+donate:
+    monero: 
+    48TmwHGVsqSKgD7giTALoK7P2muKLTJn5R8s5XtKZL1jEr4MJFBAwczVtofuFGvzsT1CzTcFXotwZCDno1UsskqFFZe9wVC
+    bitcoin:
+    18LKUKWAUBAFKzLBdFFkt687vh8rMPhL1u
