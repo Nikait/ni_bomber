@@ -1,12 +1,12 @@
 #  ni_bomber
-![alt text](pict.jpg)
+![alt text](test.jpg)
 <br/>
 <b>Hey!</b>
 This is a small sms bomber,
-the number of sms sent per second depends on the speed
-of your internet.  
-If you use this bomber at the same time by several people, 
-you can easily put the phone!
+the number of sms sent per second depends
+on the speed of your internet. If you use 
+this bomber at the same time  by several 
+people, you can easily put the phone!
 
 
 upd:
