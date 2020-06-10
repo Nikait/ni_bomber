@@ -1,4 +1,5 @@
 #  ni_bomber
+![alt text](pict.jpg)
 <b>Hey!</b>
 This is a small sms bomber,
 the number of sms sent per second depends on the speed
