@@ -10,7 +10,7 @@ can easily put the phone!
 
 
 upd:
-Действует только по русским номерам
+Valid only for Russian numbers
 
 # Install
 git clone https://github.com/Nikait/ni_bomber
