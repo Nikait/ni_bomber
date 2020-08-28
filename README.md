@@ -21,7 +21,7 @@ pip install requests
 
 pip install requests[socks]
 
-python ni_bomber.py
+python3 ni_bomber.py
 
 Relax! 
 
