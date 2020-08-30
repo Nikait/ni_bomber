@@ -1,8 +1,7 @@
 import requests
-import datetime
 import services
 
-#colours
+# colours
 green     = '\033[92m'
 cyan      = '\033[95m'
 bold      = '\033[1m'
@@ -10,24 +9,24 @@ underline = '\033[4m'
 end       = '\033[0m'
 red       = '\033[91m'
 
-#header
+# header
 print(f"{green}{bold}\t\t{underline}[NI BOMBER 2.4]{end}")
 
 print()
 print(f"{bold}coded by{end}", end="")
-print(f"{green}{bold} >> {end}", end = "")
+print(f"{green}{bold} >> {end}", end="")
 print(f"{cyan}{bold}nikait{end}")
 
-print(f"{bold}telegram{end}", end = "")
-print(f"{green}{bold} >> {end}", end = "")
+print(f"{bold}telegram{end}", end="")
+print(f"{green}{bold} >> {end}", end="")
 print(f"{cyan}{bold}@aaanikit{end}")
 print()
 
-#inputs
+# inputs
 print('enter the number without or with prefixes (+7) (8)\nexample: 9018017010')
-input_number = input(green + bold + '>> ' + end)
+input_number = input(green + bold + ">> " + end)
 print('how many sms to send?')
-sms = int(input(green + bold + '>> ' + end))
+sms = int(input(green + bold + ">> " + end))
 
 print(f"you need a{cyan} tor {end}y/n? ")
 is_tor = input(bold + green + ">> " + end)
@@ -35,7 +34,7 @@ is_tor = input(bold + green + ">> " + end)
 
 def parse_number(number):
 	msg = f"[*]check number - {green}{bold}OK{end}"
-	if int(len(number)) in (10, 11, 12):
+	if len(number) in (10, 11, 12):
 		if number[0] == "8":
 			number = number[1:]
 			print(msg)
@@ -50,12 +49,15 @@ def parse_number(number):
 	return number
 number = parse_number(input_number)
 
-#tor
+# tor
 if str(is_tor) == "y":
         print(f"[*]launch {cyan}{bold}Tor{end}...")
-        proxies = {'http': 'socks5://139.59.53.105:1080','https': 'socks5://139.59.53.105:1080'}
+        proxies = {
+            'http': 'socks5://139.59.53.105:1080',
+            'https': 'socks5://139.59.53.105:1080'
+        }
         tor = requests.get('http://icanhazip.com/', proxies=proxies).text
-        tor = (tor.replace('\n',''))
+        tor = (tor.replace('\n', ''))
         print(f"[*]launch {cyan}{bold}Tor{end} - {green}{bold}OK{end}")
 
 services.attack(number, sms)
