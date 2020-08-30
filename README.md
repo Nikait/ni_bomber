@@ -18,9 +18,9 @@ git clone https://github.com/Nikait/ni_bomber
 
 cd ni_bomber
 
-pip install requests
+pip3 install -r requirements.txt
 
-pip install requests[socks]
+
 
 python3 ni_bomber.py
 
