@@ -17,7 +17,7 @@ git clone https://github.com/Nikait/ni_bomber
 
 cd ni_bomber
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 python3 ni_bomber.py
 
