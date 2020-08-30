@@ -1,5 +1,5 @@
 #  ni_bomber
-![alt text](test.jpg)
+![alt text](img/test.jpg)
 <br/>
 <b>Hey!</b>
 This is a small sms bomber, the number of<br/>
