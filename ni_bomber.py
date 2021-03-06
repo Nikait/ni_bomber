@@ -17,7 +17,7 @@ print(f"{bold}coded by{end}", end="")
 print(f"{green}{bold} >> {end}", end="")
 print(f"{cyan}{bold}nikait{end}")
 
-print(f"{bold}telegram{end}", end="")
+print(f"{bold}twitter{end}", end="")
 print(f"{green}{bold} >> {end}", end="")
 print(f"{cyan}{bold}@aaanikit{end}")
 print()
