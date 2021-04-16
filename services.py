@@ -59,9 +59,9 @@ def time(sent):
     	
 
 def attack(number, sms):
-    number_7 = str(7) + number
-    number_plus7 = str(+7) + number
-    number_8 = str(8) + number
+    number_66 = str(66) + number
+    number_plus66 = str(+66) + number
+    number_66 = str(66) + number
     sent = 0
     print("-" * 33)
     print(f"|  {green}{bold}  amount   {end} | {green}{bold}     time     {end} |")
