@@ -38,7 +38,7 @@ def parse_number(number):
 		if number[0] == "8":
 			number = number[1:]
 			print(msg)
-		elif number[:2] == "+7":
+		elif number[:2] == "+2":
 			number = number[2:]
 			print(msg)
 		elif int(len(number)) == 10 and number[0] == 9:
