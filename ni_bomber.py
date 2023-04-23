@@ -1,6 +1,14 @@
-import requests
-import services
+#!/usr/bin/python3
+# coding: utf-8
 
+# import libs
+try:
+	import requests
+	import services
+	import sys
+except:
+	print(f'\033[91m\033[1m Loading libs failed! Please run "pip install requirements.txt"')
+	exit(1)
 # colours
 green     = '\033[92m'
 cyan      = '\033[95m'
@@ -9,6 +17,16 @@ underline = '\033[4m'
 end       = '\033[0m'
 red       = '\033[91m'
 
+# loading data from config file
+try:
+	file = open('config.conf','r')
+except:
+	print(f'{red}{bold} Permission denied while reading config.conf file!')
+	sys.exit(1)
+else:
+	exec(file.raed())
+	file.close
+	del file
 # header
 print(f"{green}{bold}\t\t{underline}[NI BOMBER 2.4]{end}")
 
@@ -49,13 +67,9 @@ def parse_number(number):
 	return number
 number = parse_number(input_number)
 
-# tor
+# tor ( if yes )
 if str(is_tor) == "y":
         print(f"[*]launch {cyan}{bold}Tor{end}...")
-        proxies = {
-            'http': 'socks5://139.59.53.105:1080',
-            'https': 'socks5://139.59.53.105:1080'
-        }
         tor = requests.get('http://icanhazip.com/', proxies=proxies).text
         tor = (tor.replace('\n', ''))
         print(f"[*]launch {cyan}{bold}Tor{end} - {green}{bold}OK{end}")
